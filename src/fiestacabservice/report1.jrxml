@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" pageWidth="1684" pageHeight="2380" columnWidth="1644" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="364"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT b.BOOKINGID,b.Btype, b.Location, b.Destination, b.Date,b.nVehicles, b.DTOBEDELIVERED, b.ReturnDate, b.CMobNumber, b.Supervisor,v.REGNUMBER,v.VMODEL,v.SUPID,d.DRIVERID,d.DNAME  FROM Booking b,AssignVehicle av, Vehicle v, Driver d
+WHERE b.BookingID=av.bkid AND av.VREGNUMBER=v.REGNUMBER AND v.DID=d.DRIVERID AND BType='Pick']]>
+	</queryString>
+	<field name="BOOKINGID" class="java.lang.String"/>
+	<field name="BTYPE" class="java.lang.String"/>
+	<field name="LOCATION" class="java.lang.String"/>
+	<field name="DESTINATION" class="java.lang.String"/>
+	<field name="DATE" class="java.sql.Date"/>
+	<field name="NVEHICLES" class="java.lang.Integer"/>
+	<field name="DTOBEDELIVERED" class="java.sql.Date"/>
+	<field name="RETURNDATE" class="java.sql.Date"/>
+	<field name="CMOBNUMBER" class="java.lang.String"/>
+	<field name="SUPERVISOR" class="java.lang.String"/>
+	<field name="REGNUMBER" class="java.lang.String"/>
+	<field name="VMODEL" class="java.lang.String"/>
+	<field name="SUPID" class="java.lang.String"/>
+	<field name="DRIVERID" class="java.lang.String"/>
+	<field name="DNAME" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="677" y="19" width="237" height="40"/>
+				<textElement>
+					<font fontName="Arial" size="24"/>
+				</textElement>
+				<text><![CDATA[Pick Booking Report]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="1" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="50" splitType="Stretch">
+			<staticText>
+				<reportElement x="77" y="30" width="100" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[BOOKING ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="177" y="30" width="100" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Booking TYPE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="277" y="30" width="100" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Customer Location]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="377" y="30" width="100" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[DESTINATION]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="477" y="30" width="100" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Booking Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="577" y="30" width="100" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[No.of Vehicles]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="777" y="30" width="100" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Returned Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="877" y="30" width="100" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Customer Mobile]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="977" y="30" width="100" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Supervisor]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1077" y="30" width="100" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Vehicle Number]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1177" y="30" width="100" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Vehicle Model]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1277" y="30" width="100" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Supervisor]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1377" y="30" width="100" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Driver ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1477" y="30" width="100" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Driver's Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="677" y="30" width="100" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[DeliveryDate]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="59" splitType="Stretch">
+			<textField>
+				<reportElement x="77" y="31" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{BOOKINGID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="177" y="31" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{BTYPE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="277" y="31" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{LOCATION}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="377" y="31" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{DESTINATION}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="477" y="31" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{DATE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="577" y="31" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{NVEHICLES}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="777" y="31" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{RETURNDATE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="677" y="31" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{DTOBEDELIVERED}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="877" y="31" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{CMOBNUMBER}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="977" y="31" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{SUPERVISOR}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="1077" y="31" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{REGNUMBER}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="1177" y="31" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{VMODEL}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="1277" y="31" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{SUPID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="1377" y="31" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{DRIVERID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="1477" y="31" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{DNAME}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="4" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="2" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
